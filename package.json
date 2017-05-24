@@ -1,0 +1,15 @@
+{
+  "name": "equiniti",
+  "version": "0.0.1",
+  "description": "A project for bluegrass",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heshamelmasry77/equiniti.git"
+  },
+  "author": "Hesham El Masry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heshamelmasry77/equiniti/issues"
+  },
+  "homepage": "https://github.com/heshamelmasry77/equiniti#readme"
+}
