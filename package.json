@@ -11,5 +11,9 @@
   "bugs": {
     "url": "https://github.com/heshamelmasry77/equiniti/issues"
   },
-  "homepage": "https://github.com/heshamelmasry77/equiniti#readme"
+  "homepage": "https://github.com/heshamelmasry77/equiniti#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8"
+  }
 }
