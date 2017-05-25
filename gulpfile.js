@@ -18,6 +18,8 @@ var jsSources = [
 ];
 
 var sassSources = ['components/sass/style.scss'];
+
+var htmlSources = ['builds/development/*.html'];
 gulp.task('coffee', function () {
     gulp.src(coffeeSources)
         .pipe(coffee({bare: true})
@@ -54,6 +56,8 @@ gulp.task('watch', function () {
     gulp.watch(jsSources, ['js']);
     gulp.watch(coffeeSources, ['coffee']);
     gulp.watch('components/sass/*.scss', ['compass']);
+    gulp.watch(htmlSources, ['html']);
+    gulp.watch('builds/development/js/*.json', ['json']);
 });
 
 // task to start up the server
@@ -64,4 +68,17 @@ gulp.task('connect', function () {
     });
 });
 
-gulp.task('default', ['coffee', 'js', 'compass', 'watch', 'connect']);
+// task to watch and reload when i change my static files
+gulp.task('html', function () {
+    gulp.src(htmlSources)
+        .pipe(connect.reload())
+
+});
+// task to watch and reload when i change any json files
+gulp.task('json', function () {
+    gulp.src('builds/development/js/*.json')
+        .pipe(connect.reload())
+
+});
+
+gulp.task('default', ['coffee', 'js','json', 'compass', 'watch', 'connect', 'html']);
