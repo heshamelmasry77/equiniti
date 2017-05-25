@@ -9,6 +9,8 @@ var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
 var Jsonminify = require('gulp-jsonminify');
+var imagemin = require('gulp-imagemin');
+var pngcrush = require('imagemin-pngcrush');
 
 var env,
     coffeeSources,
@@ -87,6 +89,7 @@ gulp.task('watch', function () {
     gulp.watch('components/sass/*.scss', ['compass']);
     gulp.watch('builds/development/*.html', ['html']);
     gulp.watch('builds/development/js/*.json', ['json']);
+    gulp.watch('builds/development/images/**/*.*', ['images']);
 });
 
 // task to start up the server
@@ -105,6 +108,23 @@ gulp.task('html', function () {
         .pipe(connect.reload())
 
 });
+
+
+
+gulp.task('images', function () {
+    gulp.src('builds/development/images/**/*.*')
+        .pipe(gulpif(env === 'production', imagemin({
+            progressive:true,
+            svgoPlugins:[{removeViewBox:false}],
+            use:[pngcrush]
+        })))
+        .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'images')))
+        .pipe(connect.reload())
+
+});
+
+
+
 // task to watch and reload when i change any json files
 gulp.task('json', function () {
     gulp.src('builds/development/js/*.json')
@@ -114,4 +134,4 @@ gulp.task('json', function () {
 
 });
 
-gulp.task('default', ['coffee', 'js', 'json', 'compass', 'watch', 'connect', 'html']);
+gulp.task('default', ['coffee', 'js', 'json', 'compass', 'watch', 'connect', 'html','images']);
