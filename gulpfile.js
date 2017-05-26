@@ -11,6 +11,9 @@ var minifyHTML = require('gulp-minify-html');
 var Jsonminify = require('gulp-jsonminify');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+
 
 var env,
     coffeeSources,
@@ -20,6 +23,15 @@ var env,
     jsonSources,
     outputDir,
     sassStyle;
+
+// Static server
+gulp.task('browser-sync', function () {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
 
 
 env = process.env.NODE_ENV || 'development';
@@ -110,19 +122,17 @@ gulp.task('html', function () {
 });
 
 
-
 gulp.task('images', function () {
     gulp.src('builds/development/images/**/*.*')
         .pipe(gulpif(env === 'production', imagemin({
-            progressive:true,
-            svgoPlugins:[{removeViewBox:false}],
-            use:[pngcrush]
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngcrush]
         })))
         .pipe(gulpif(env === 'production', gulp.dest(outputDir + 'images')))
         .pipe(connect.reload())
 
 });
-
 
 
 // task to watch and reload when i change any json files
@@ -134,4 +144,16 @@ gulp.task('json', function () {
 
 });
 
-gulp.task('default', ['coffee', 'js', 'json', 'compass', 'watch', 'connect', 'html','images']);
+gulp.task('serve', function () {
+
+    // Serve files from the root of this project
+    browserSync.init({
+        server: {
+            baseDir: "builds/development/"
+        }
+    });
+
+    gulp.watch("*.html").on("change", reload);
+});
+
+gulp.task('default', ['coffee', 'js', 'json', 'compass', 'watch', 'connect', 'html', 'images']);
