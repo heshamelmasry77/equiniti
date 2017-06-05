@@ -1,10 +1,14 @@
 // _base.scss
 // ==============
+
 body {
-  background: lighten($beige, 10%);
+  background: lighten($white, 10%);
   font-family: $bodyFont;
   font-size: 1.1em;
+  border-top: 5px solid #e12522;
+  margin: 0px;
 }
+
 
 #content {
   color: $pink;

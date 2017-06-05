@@ -53,7 +53,8 @@ jsSources = [
     'components/scripts/rclick.js',
     'components/scripts/pixgrid.js',
     'components/scripts/tagline.js',
-    'components/scripts/template.js'
+    'components/scripts/template.js',
+    'components/scripts/nav.js'
 ];
 
 sassSources = ['components/sass/style.scss'];

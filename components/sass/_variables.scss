@@ -1,7 +1,8 @@
 // _variables.scss
 // =================
-@import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,700,900');
 
+$white: #ffffff;
 $beige: #E3C691;
 $darkGreenGold: #8D8862;
 $lightGreen: #C0DC99;
@@ -13,5 +14,6 @@ $darkPurple: #3A3248;
 $pink: #CC8E94;
 $skin: #B08B7B;
 
-$headFont: 'Patua One', sans-serif;
-$bodyFont: 'Inika', serif;
+$headFont: 'Roboto', sans-serif;
+
+$bodyFont: 'Roboto', sans-serif;

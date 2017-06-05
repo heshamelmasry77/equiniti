@@ -1,0 +1,20 @@
+{
+  "name": "equiniti",
+  "description": "A project for bluegrass",
+  "main": "",
+  "authors": [
+    "Hesham El Masry"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/heshamelmasry77/equiniti",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

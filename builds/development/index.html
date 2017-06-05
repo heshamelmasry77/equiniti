@@ -5,13 +5,45 @@
     <title>Equiniti</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
 <body>
 
-<header class="city">
+<header>
+
     <div class="container">
-        <h1 class="text-right">sdfsd</h1>
+
+        <nav>
+            <ul class="collapse-menu">
+                <li class="sub-menu-parent">
+                    <a href="#" id="sub-menu-parent-anchor">EQUINITI GROUP <i class="fa fa-sort" aria-hidden="true"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#"><span>ENUINITI</span> PAYMASTER
+                        </a> </li>
+                        <li><a href="#"><span>ENUINITI</span> CLAYBROOK <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </a></li>
+                        <li><a href="#"><span>ENUINITI</span> ORG <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </a></li>
+                        <li><a href="#"><span>ENUINITI</span> ICS <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </a></li>
+                        <li><a href="#"><span>ENUINITI</span> ORGANISATION <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="topnav" id="myTopnav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon">&#9776;</a>
+        </div>
     </div>
 </header>
 
@@ -145,3 +177,102 @@
 </script>
 </body>
 </html>
+
+<form id="orderForm" class="boxed-form" name="order-form" method="post" novalidate="novalidate">
+    <div id="success">
+        <p>Your message was sent successfully!</p>
+    </div>
+    <div id="error">
+        <p>Something went wrong, try refreshing and submitting the form again.</p>
+    </div>
+    <div class="form-row">
+        <div class="form-row-label">Name <span class="required">*</span></div>
+        <div class="form-row-group">
+            <div class="form-control--50">
+                [text* fname class:form-control placeholder "First Name"]
+            </div>
+
+            <div class="form-control--50">
+                [text* lname class:form-control placeholder "Last Name"]
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-row-label">Address <span class="required">*</span></div>
+        <div class="form-row-group">
+            <div class="form-control--50">
+                [text* street1 class:form-control placeholder "Street Address"]
+            </div>
+            <div class="form-control--50">
+                [text street2 class:form-control placeholder "Street Address Line 2"]
+            </div>
+        </div>
+        <div class="form-row-group">
+            <div class="form-control--30">
+                [text* postal class:form-control placeholder "Postal / Zip Code"]
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-row-label">Phone Number <span class="required">*</span></div>
+        <div class="form-row-group">
+            <div class="form-control--50">
+                [text* phone class:form-control placeholder "Phone Number"]
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-row-label">E-mail <span class="required">*</span></div>
+        <div class="form-row-group">
+            [email* email class:form-control class:form-control--50 placeholder "Email"]
+        </div>
+
+    </div>
+    <div class="form-row">
+        <div class="form-row-group--date">
+            <div class="form-row-label">Pick-Up Date</div>
+            <div class="form-row-group">
+                <div class="datetimepicker-wrap">
+                    [text pickupdate class:form-control class:datetimepicker]
+                </div>
+            </div>
+        </div>
+        <div class="form-row-group--time">
+            <div class="form-row-label">Pick Up Time</div>
+            <div class="form-row-group">
+                <div class="timepicker-wrap">
+                    [text pickuptime class:form-control class:timepicker]
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-row-label--lg">Property</div>
+        <div class="form-row-group form-new">
+            <div class="clearfix">
+                [radio Property class:radio radio1-1 "Commercial" "Residential" ]
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-row-label">Number of rooms</div>
+        <div class="form-row-group">
+            [text* rooms number class:form-control class:form-control--50 placeholder "Number of rooms"]
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="form-row-label">Special Instructions <span class="required">*</span></div>
+        <div class="form-row-group">
+            [text* special class:form-control placeholder "Example: Wash whites with hot water"]
+        </div>
+    </div>
+    <div class="text-center">
+        [submit class:btn class:btn-default class:top "SUBMIT ORDER"]
+    </div>
+</form>
+

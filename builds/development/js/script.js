@@ -50,6 +50,7 @@ var pixgrid = function () {
             theImage;
     }
 
+
     var myNodes = document.querySelectorAll(".pixgrid");
     for (var i = 0; i < myNodes.length; i++) {
         myNodes[i].addEventListener("click", function (e) {
@@ -104,6 +105,28 @@ $(function () {
     }); //getJSON
 
 }); //function
+
+/**
+ * Created by heshamelmasry on 2017/05/26.
+ */
+
+var $;
+
+$ = require('jquery');
+
+var x = $("#myTopnav");
+
+x.click(function () {
+
+    if (x.hasClass("topnav")) {
+
+        x.toggleClass("responsive");
+    }
+});
+
+
+
+
 
 },{"jquery":2,"mustache":3}],2:[function(require,module,exports){
 /*!

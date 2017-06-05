@@ -9,6 +9,7 @@ var pixgrid = function () {
             theImage;
     }
 
+
     var myNodes = document.querySelectorAll(".pixgrid");
     for (var i = 0; i < myNodes.length; i++) {
         myNodes[i].addEventListener("click", function (e) {
