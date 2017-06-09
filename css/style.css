@@ -277,32 +277,57 @@ section {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #ffffff;
+  text-align: right;
 }
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
+  display: inline-block;
+  color: #666666;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  border-right: 1px solid #c4c4c4;
 }
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  color: #666666;
+}
+.topnav a:nth-last-child(2) {
+  border-right: none;
+}
+.topnav a:nth-last-child(1) {
+  border-right: none;
+}
+.topnav a:nth-last-child(7) {
+  border-right: none;
 }
 .topnav .icon {
   display: none;
 }
+.topnav .logo {
+  float: left;
+}
+.topnav .logo img {
+  max-width: 166px;
+  width: 100%;
+}
 
 @media screen and (max-width: 600px) {
+  .topnav a {
+    border: none;
+  }
   .topnav a:not(:first-child) {
     display: none;
   }
   .topnav a.icon {
     float: right;
     display: block;
+  }
+  .topnav a:hover {
+    background-color: #e0e0e0;
+  }
+  .topnav a:nth-last-child(7) {
+    background-color: transparent;
   }
 }
 @media screen and (max-width: 600px) {
