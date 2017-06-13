@@ -2,23 +2,64 @@
 // ============
 .superhero {
   background-color: #e8e8e8;
-
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 
   @media (min-width: 801px) {
-    height: 350px;
+    height: 450px;
   }
 
   @media (max-width: 800px) {
-    height: 150px;
+    height: 650px;
   }
 
   @media (max-width: 300px) {
     height: 100px;
   }
+  .everysuperhero {
+    width: 60%;
+    display: inline-block;
+    float: left;
+    h2 {
+      color: #e12522;
+      font-weight: 300;
+      font-size: 2.5em;
+      margin: 25px 0;
+    }
+    .superhero {
+      margin-bottom: 10px;
+    }
+    .sidekick {
+      color: #830a02;
+      margin-top: 10px;
+    }
+    p {
+      color: #666666;
+      font-size: .9em;
+      margin: 0;
+      line-height: normal;
+    }
+    a {
+      color: #c81e19;
+      text-decoration: underline;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+  .chair {
+    @include backImage('../images/chair.png');
+
+    width: 40%;
+    display: inline-block;
+    float: left;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+
 }
 
 //superhero
