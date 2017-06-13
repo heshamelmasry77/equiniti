@@ -86,8 +86,7 @@ gulp.task('compass', function () {
         .pipe(compass({
             sass: 'components/sass',
             image: outputDir + 'images',
-            style: sassStyle
-        })
+            style: sassStyle})
             .on('error', gutil.log))
         .pipe(gulp.dest(outputDir + 'css'))
         .pipe(connect.reload())

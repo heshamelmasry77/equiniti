@@ -1,19 +1,27 @@
 // _modules.scss
 // ============
-.city {
-  @include backImage('../images/backgrounds/seattle_skyline.jpg');
-  img.logo {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    max-width: 450px;
-    min-width: 250px;
+.superhero {
+  background-color: #e8e8e8;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  @media (min-width: 801px) {
+    height: 350px;
   }
-  //logo
+
+  @media (max-width: 800px) {
+    height: 150px;
+  }
+
+  @media (max-width: 300px) {
+    height: 100px;
+  }
 }
 
-//city
+//superhero
 
 .featuredartists {
   background: $darkGreenGold;

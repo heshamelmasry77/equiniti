@@ -58,39 +58,27 @@ section {
   clear: both;
 }
 
-.city {
-  background: url("../images/backgrounds/seattle_skyline.jpg") no-repeat 50% 20%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.superhero {
+  background-color: #e8e8e8;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 @media (min-width: 801px) {
-  .city {
+  .superhero {
     height: 350px;
   }
 }
 @media (max-width: 800px) {
-  .city {
+  .superhero {
     height: 150px;
   }
 }
 @media (max-width: 300px) {
-  .city {
+  .superhero {
     height: 100px;
   }
-}
-.city img.logo {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  max-width: 450px;
-  min-width: 250px;
 }
 
 .featuredartists {
@@ -306,6 +294,7 @@ section {
 }
 .topnav .logo {
   float: left;
+  padding: 0;
 }
 .topnav .logo img {
   max-width: 166px;
