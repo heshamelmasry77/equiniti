@@ -8,11 +8,11 @@
   transition: all 0.3s ease-out;
 
   @media (min-width: 801px) {
-    height: 450px;
+    height: 550px;
   }
 
   @media (max-width: 800px) {
-    height: 650px;
+    height: 800px;
   }
 
   @media (max-width: 300px) {
@@ -45,6 +45,34 @@
       color: #c81e19;
       text-decoration: underline;
     }
+    .top-sidekick {
+      margin-top: 20px;
+      img {
+        max-width: 91px;
+        width: 100%;
+        display: inline-block;
+        float: left;
+      }
+      .the-sidekick {
+        float: left;
+        display: inline-block;
+        padding-left: 15px;
+        h3 {
+          margin: 0 0 10px 0;
+          font-size: 1.5em;
+          font-weight: 300;
+          color: #e12522;
+        }
+        p {
+          color: #830a02;
+          font-weight: 400;
+        }
+        a {
+          color: #830a02;
+        }
+      }
+    }
+
     @media (max-width: 800px) {
       width: 100%;
     }
