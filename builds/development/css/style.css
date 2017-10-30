@@ -142,7 +142,7 @@ section {
   }
 }
 .superhero .chair {
-  background: url("../images/chair.png") no-repeat 50% 20%;
+  /*background: url("../images/chair.png") no-repeat 50% 20%;*/
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;

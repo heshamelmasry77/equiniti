@@ -78,7 +78,7 @@
     }
   }
   .chair {
-    @include backImage('../images/chair.png');
+    //@include backImage('../images/chair.png');
 
     width: 40%;
     display: inline-block;
